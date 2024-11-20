@@ -1,24 +1,29 @@
 {
   "icons": [
     {
-      "src": "favicon/icon-192.png",
-      "type": "image/png",
-      "size": "192x192"
-    },
-    {
-      "src": "favicon/icon-192.png",
+      "src": "favicons/icon-144.png",
       "type": "image/png",
       "size": "144x144"
     },
     {
-      "src": "favicon/icon-512.png",
+      "src": "favicons/icon-180.png",
       "type": "image/png",
-      "size": "512x512"
+      "size": "180x180"
     },
     {
-      "src": "favicon/icon-310.png",
+      "src": "favicons/icon-192.png",
+      "type": "image/png",
+      "size": "192x192"
+    },
+    {
+      "src": "favicons/icon-310.png",
       "type": "image/png",
       "size": "310x310"
+    },
+    {
+      "src": "favicons/icon-512.png",
+      "type": "image/png",
+      "size": "512x512"
     }
   ]
 }
