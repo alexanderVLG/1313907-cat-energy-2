@@ -6,9 +6,9 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/page.scss";
 @import "./blocks/button.scss";
-@import "./blocks/header.scss";
+@import "./blocks/page.scss";
+@import "./blocks/catalog.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/navigation.scss";
 @import "./blocks/promo.scss";
@@ -21,7 +21,6 @@
 @import "./blocks/map.scss";
 @import "./blocks/main-footer.scss";
 @import "./blocks/social.scss";
-@import "./blocks/catalog.scss";
 @import "./blocks/additional-goods.scss";
 @import "./blocks/banner.scss";
 @import "./blocks/subscribe.scss";
