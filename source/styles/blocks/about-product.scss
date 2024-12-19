@@ -1,21 +1,66 @@
+.about-product {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 110px;
+    min-width: 1440px;
+    border-bottom: none;
+  }
+}
+
 .about-product__title {
-  font-family: "Oswald", sans-serif;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $secondary-font;
   font-weight: 400;
   font-size: 36px;
   color: #000000;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
   }
 }
 
+// осталось добавить цифру на фон
+
+.about-product__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+  }
+}
+
 .about-product__item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 18px;
 
   &::before {
     content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
     width: 60px;
     height: 60px;
     background-color: $bg-basic-green;
@@ -61,8 +106,33 @@
     background-repeat: no-repeat;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    margin-bottom: 0;
+    padding: 35px 0;
     font-size: 16px;
     line-height: 24px;
+    width: 230px;
+
+    &:nth-child(even) {
+      grid-column: 2/3;
+    }
+
+    &::before {
+      position: static;
+      display: block;
+      margin-bottom: 31px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+    width: 250px;
+
+    &:nth-child(even) {
+      grid-column: auto;
+    }
   }
 }

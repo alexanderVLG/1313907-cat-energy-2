@@ -1,16 +1,30 @@
 .navigation {
-  font-family: "Oswald", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 13px 0 15px;
+  font-family: $secondary-font;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 0;
     font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 110px 29px;
   }
 }
 
 .navigation__logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+
   &:hover {
     opacity: 0.8;
   }
@@ -25,23 +39,67 @@
 }
 
 picture {
+  display: flex;
   font-size: 0;
 }
 
+.navigation__logo-text {
+  margin-left: 56px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+  }
+}
+
 .navigation__list {
-  display: flex;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 
-  @media (min-width: 1440px) {
-    background-color: $bg-basic-green;
+  @media (max-width: $tablet-width) {
+    display: none;
+
+    &--show {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #ffffff;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 33px;
   }
 }
 
 .navigation__item {
-  @media (min-width: 768px) {
+  justify-items: center;
+  border-top: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+
     &--current {
       border-bottom: 2px solid $bg-basic-green;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &:last-child .navigation__link {
+      padding-right: 0;
     }
   }
 
@@ -49,12 +107,16 @@ picture {
     &--current {
       border-color: #ffffff;
     }
+
+    &--current-catalog {
+      border-color: $bg-basic-green;
+    }
   }
 }
 
 .navigation__link {
   display: block;
-  padding: 10px 0;
+  padding: 22px 10px 24px;
   color: #000000;
   text-decoration: none;
 
@@ -70,8 +132,16 @@ picture {
     opacity: 0.3;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $tablet-width) {
+    padding: 12px 0;
+  }
+
+  @media (min-width: $desktop-width) {
     color: #ffffff;
     font-size: 20px;
+
+    &--color {
+      color: #000000;
+    }
   }
 }
