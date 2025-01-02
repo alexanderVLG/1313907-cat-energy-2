@@ -1,1 +1,0 @@
-var t=document.querySelector(".button-wrapper"),e=document.querySelector(".burger-button"),o=document.querySelector(".navigation__list");t.addEventListener("click",()=>{e.classList.toggle("burger-button--show"),o.classList.toggle("navigation__list--show")});
